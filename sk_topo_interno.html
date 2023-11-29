@@ -1,0 +1,47 @@
+<div class="topo_geral">
+        <center><b>SALÃO SMART</b></center>
+    </div>
+
+    <div class="geral">
+    	<div style="height: 100px;">
+
+	        <?php if($_SESSION['tipo'] == "2") { ?>
+		        <div class="dropdown2 float">
+				<a href="<?=$PATH_PAI; ?>principal.php" class="dropbtn">Principal</a>
+			</div>
+		        <div class="dropdown float">
+			  <button class="dropbtn">Cadastros</button>
+			  <div class="dropdown-content">
+			    <a href="usuarios.php?filtro=cliente">Clientes</a>
+			    <a href="usuarios.php?filtro=profissionais">Profissionais</a>
+			    <!--<a href="usuario.php?filtro=adm">Administração</a>-->
+			  </div>
+			</div>
+			<div class="dropdown4 float">
+				<a href="<?=$PATH_PAI; ?>agendas.php" class="dropbtn">Datas Livres</a>
+			</div>
+			<?php } ?>
+			
+			<div class="dropdown4 float">
+				<a href="<?=$PATH_PAI; ?>agendamentos.php" class="dropbtn">Agendamento</a>
+			</div>
+
+			<?php if($_SESSION['tipo'] == "2") { ?>
+				
+			<?php } ?>
+			<div class="dropdown5 float">
+				<a href="<?=$PATH_PAI; ?>meusdados.php" class="dropbtn">Meus Dados</a>
+			</div>
+			<div class="dropdown5 float">
+				<a href="<?=$PATH_PAI; ?>logout.php" class="dropbtn">Sair</a>
+			</div>
+
+	        <div class="limpa"></div>
+	    </div>
+		<div class="limpa"></div>
+
+        <div class="separador"></div>
+        Bem vindo <?php echo $_SESSION['nome']; ?>
+        <div class="separador"></div>
+    </div>
+</div>
